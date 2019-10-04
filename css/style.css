@@ -49,10 +49,36 @@ footer{
 .top-search input{
     margin-top:6%;
 } 
+/* Animated bar */
+.div-animated-bar{
+    background: linear-gradient(270deg, #007bff, #ffffff, #007bff);
+background-size: 600% 600%;
+
+-webkit-animation: AnimationName 8s ease infinite;
+-moz-animation: AnimationName 8s ease infinite;
+animation: AnimationName 8s ease infinite;
+height:5px;
+}
+
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 47%}
+    50%{background-position:100% 54%}
+    100%{background-position:0% 47%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 47%}
+    50%{background-position:100% 54%}
+    100%{background-position:0% 47%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 47%}
+    50%{background-position:100% 54%}
+    100%{background-position:0% 47%}
+}
 
 /* NAVIGATION BAR*/
 .navbar{
-    border-top:2px solid #007bff;
     background-color:#464646;
 }
 nav ul{
@@ -82,6 +108,8 @@ nav a:hover{
 button.btn.btn-primary a:hover{
     text-decoration:none;
 }
+
+/* Static home box */
 .box-home{
     border-radius:5px;
     margin-top:3%;
@@ -89,6 +117,38 @@ button.btn.btn-primary a:hover{
     padding:3% 2%;
 }
 
+    /* 3 Boxes container */
+.box-container{
+    margin-top:2%;
+}
+.box-title {
+    padding:0.5% 0%;
+    text-align:center;
+    background-color:#007bff;
+    border-radius:5px;
+    color:#fff;
+}
+.box-body{
+    padding:1% 0%;
+}
+
+.latest-updates-box{
+
+}
+.latest-updates-box ul{
+    padding-left:0;
+    text-decoration: none;
+
+}
+
+.latest-updates-box li{
+        list-style: none;
+        line-height: 2rem;
+        border-bottom:1px dotted #6590be;
+}
+.latest-updates-box a{
+    text-decoration:none;
+}
 
 
     /* FOOTER*/
