@@ -103,8 +103,30 @@ nav a:hover{
     margin-top:4%;
     padding:4% 2%;
     text-align:center;
-    background-color:rgb(198, 230, 241);
+    background: linear-gradient(268deg, #c6e6f1, #e4e4e4, #c6e6f1);
+    background-size: 600% 600%;
+    
+    -webkit-animation: AnimationName 8s ease infinite;
+    -moz-animation: AnimationName 8s ease infinite;
+    animation: AnimationName 8s ease infinite;
 }
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 60%}
+    50%{background-position:100% 41%}
+    100%{background-position:0% 60%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 60%}
+    50%{background-position:100% 41%}
+    100%{background-position:0% 60%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 60%}
+    50%{background-position:100% 41%}
+    100%{background-position:0% 60%}
+}
+
 button.btn.btn-primary a:hover{
     text-decoration:none;
 }
@@ -148,6 +170,40 @@ button.btn.btn-primary a:hover{
 }
 .latest-updates-box a{
     text-decoration:none;
+}
+
+
+
+/* BLOG - CONTENT */
+
+/* Main Blog Content */
+.main-blog-content{
+    margin-top:15px;
+}
+.blog-post-title{
+    color:#007bff;
+}
+.blog-post-sub-title{
+    background-color:#007bff;
+    color:#fff;
+}
+.img-container{
+    width:50%;
+    float:left;
+}
+.blog-post-article{
+    float:right;
+    width:49%;
+}
+.read-more-container{
+    padding-top:20px;
+    clear:both;
+    text-align:center;
+}
+
+/* Side Blog Content */
+.widget-sidebar{
+    margin-top:15px;
 }
 
 
