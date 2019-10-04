@@ -1,0 +1,109 @@
+/* Future theme details for WP*/
+
+
+
+/* TAG SELECTORS */
+body{
+
+}
+
+header{
+
+}
+nav{
+    
+}
+
+footer{
+    background-color: #464646;
+}
+
+/* CLASS SELECTORS */
+.container{
+
+}
+.top-container{
+    padding:1% 0% 0% 0%;
+}
+.site-title{
+    color:#007bff;
+    padding-right:0;
+    width:41%;
+    display:inline-block;
+    
+}
+.site-title h1{
+    font-size:2rem;
+}
+
+.top-site-description{
+    display:inline-block;
+    width:30%;
+}
+.top-site-description p{
+}
+
+.top-search{
+
+}
+.top-search input{
+    margin-top:6%;
+} 
+
+/* NAVIGATION BAR*/
+.navbar{
+    border-top:2px solid #007bff;
+    background-color:#464646;
+}
+nav ul{
+    list-style-type: none;
+    padding-left:0;
+    margin:0;
+}
+nav li{
+    display:inline-block;
+    padding-right:20px;
+}
+nav a{
+    color:#fff;
+    text-decoration:none;
+}
+nav a:hover{
+    text-decoration: none;
+}
+/* Content */
+.main-site-front{
+    border-radius:10px;
+    margin-top:4%;
+    padding:4% 2%;
+    text-align:center;
+    background-color:rgb(198, 230, 241);
+}
+button.btn.btn-primary a:hover{
+    text-decoration:none;
+}
+.box-home{
+    border-radius:5px;
+    margin-top:3%;
+    border:1px solid grey;
+    padding:3% 2%;
+}
+
+
+
+    /* FOOTER*/
+
+.footer-navbar{
+    background-color:#464646;
+    float: right;
+
+}
+.footer-copyright{
+    float:left;
+}
+/* ID SELECTORS */
+#footer{
+    margin-top:50px;
+    padding:1% 4% 2%;
+    height:50px;
+}
