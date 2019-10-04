@@ -205,6 +205,32 @@ button.btn.btn-primary a:hover{
 .widget-sidebar{
     margin-top:15px;
 }
+.widget{
+    border:1px solid #ccc;
+    padding:5% 0% 5% 3%;
+    margin-top:30px;
+    text-align:left;
+    max-width:200px;
+}
+.widget-title{
+
+}
+
+.widget-body{
+
+}
+.widget-body ul{
+    padding-left:0;
+}
+.widget-body ul li{
+    list-style: none;
+    line-height: 2.2rem;
+   
+}
+.widget-body a{
+    text-decoration:none;
+    border-bottom:2px dotted #007bff;
+}
 
 
     /* FOOTER*/
