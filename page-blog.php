@@ -18,35 +18,40 @@
                     while ($post_query->have_posts()) {
                         $post_query->the_post();
                         ?>
-                    <article class="post">
-                        <div class="blog-post-title">
-                            <a href="">
-                                <h3><?php the_title(); ?></h3>
-                            </a>
-                        </div>
-                        <div class="blog-post-sub-title">
-                            <p>Created by <?php the_author(); ?> at <?php the_time(); ?></p>
-                        </div>
-                        <div class="img-container">
-                        <?php the_post_thumbnail('thumbnail', array('class' => 'img-fluid')); ?>
-                        </div>
-                        <div class="blog-post-article">
-                            <p>
-                                <?php the_excerpt(); ?>
-                            </p>
-                        </div>
-                    </article>
-                    <?php wp_reset_postdata(); ?>
+                        <article class="post">
+                            <div class="blog-post-title">
+                                <a href="">
+                                    <h3><?php the_title(); ?></h3>
+                                </a>
+                            </div>
+                            <div class="blog-post-sub-title">
+                                <p>Created by <?php the_author(); ?> at <?php the_time(); ?></p>
+                            </div>
+                            <div class="img-container">
+                            <?php the_post_thumbnail('', array('class' => 'img-fluid')); ?>
+                            </div>
+                            <div class="blog-post-article">
+                                <p>
+                                    <?php the_excerpt(); ?>
+                                </p>
+                            </div>
+                            <div class="read-more-container">
+                                <button class="btn btn-primary">Read More</button>
+                                <hr>
+                            </div>
+                        </article>
+                        <br>
+
                 <?php
                     }
                 }
                 ?>
-
+                <?php wp_reset_postdata(); ?>
             </div>
 
             <!-- Sidebar-right -->
             <div class="col-4 widget-sidebar">
-                Widget content
+                <?php include('widgets.php'); ?>
             </div>
 
         </div>
