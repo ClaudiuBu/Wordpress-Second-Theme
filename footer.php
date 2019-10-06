@@ -1,10 +1,10 @@
-<footer>
+<footer class="bg-dark">
         <div id="footer">
             <div class="footer-copyright">
                 <p>&copy; 2019 - Wordpress</p>
             </div>
             <div class="footer-navbar">
-                <nav>
+                <nav class="bg-dark">
                     <ul>
                         <li>
                             <a href="#">Home</a>
@@ -20,7 +20,6 @@
             </div>
         </div>
     </footer>
-
     <?php wp_footer() ?>
 </body>
 

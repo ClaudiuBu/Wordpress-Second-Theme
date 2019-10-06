@@ -47,28 +47,7 @@
 
                     </div>
                     <div class="col-4">
-                        <div class="box-title">
-                            <h4>Latest News</h4>
-                        </div>
-                        <div class="latest-updates-box">
-                            <ul>
-                                <li>
-                                    <a href="">Gallery Post</a>
-                                </li>
-                                <li>
-                                    <a href="">Blog Post 1</a>
-                                </li>
-                                <li>
-                                    <a href="">Blog Post 2</a>
-                                </li>
-                                <li>
-                                    <a href="">Blog Post 3</a>
-                                </li>
-                                <li>
-                                    <a href="">Blog Post 4</a>
-                                </li>
-                            </ul>
-                        </div>
+                        <?php include('widgets2.php'); ?>
                     </div>
                 </div>
             </div>

@@ -20,7 +20,7 @@
                         ?>
                         <article class="post">
                             <div class="blog-post-title">
-                                <a href="">
+                                <a href="<?php the_permalink(); ?>">
                                     <h3><?php the_title(); ?></h3>
                                 </a>
                             </div>
@@ -36,7 +36,11 @@
                                 </p>
                             </div>
                             <div class="read-more-container">
-                                <button class="btn btn-primary">Read More</button>
+                                <button class="btn btn-outline-primary">
+                                    <a href="<?php the_permalink(); ?>">
+                                    Read More
+                                </a>
+                            </button>
                                 <hr>
                             </div>
                         </article>

@@ -1,10 +1,5 @@
 
 <?php 
-
-@ini_set( 'upload_max_size' , '64M' );
-@ini_set( 'post_max_size', '64M');
-@ini_set( 'max_execution_time', '300' );
-
 function simple_theme_setup(){
     //Featured image support
 
@@ -42,9 +37,27 @@ function init_widgets($id){
         'id' => 'sidebar',
         'before_widget' =>'<div class="widget">',
         'after_widget' => '</div>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
+        'before_title' => '<div class="widget-title"><h3>',
+        'after_title' => '</h3></div>'
+    ));
+}
+add_action('widgets_init','init_widgets');
+
+function init_widgets2($id){
+    register_sidebar(array(
+        'name' =>'Sidebar Front Page',
+        'id' => 'sidebar2',
+        'before_widget' =>'<div class="widget_2">',
+        'after_widget' => '</div>',
+        'before_title' => '<div class="box-title"><h4>',
+        'after_title' => '</h4></div>'
     ));
 }
 
-add_action('widgets_init','init_widgets');
+add_action('widgets_init','init_widgets2');
+
+function enqueue_my_custom_script() {
+    wp_enqueue_script( 'script-image', '/wp-content/themes/wpsecondtheme/scripts/image-script.js', false );
+}
+ 
+add_action( 'wp_enqueue_scripts', 'enqueue_my_custom_script' );
