@@ -11,7 +11,8 @@ add_action('after_setup_theme','simple_theme_setup');
 //Add navigation menu back-edn
 
 register_nav_menus(array(
-    'primary' => __('Primary Menu')
+    'primary' => __('Primary Menu'),
+    'footer' => __('Footer Menu')
 ));
 
 

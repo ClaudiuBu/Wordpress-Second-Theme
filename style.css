@@ -236,9 +236,15 @@ button.btn.btn-primary a:hover {
 }
 /* BLOG - CONTENT */
 /* Main Blog Content */
+article.post{
+    border:1px dotted grey;
+    padding: 3% 5% 3% 5%;
+    background-color:rgb(255, 253, 253);
+}
 
 .main-blog-content {
-    margin-top: 15px;
+    margin-top: 45px;
+  
 }
 
 .blog-post-title {
@@ -254,6 +260,16 @@ button.btn.btn-primary a:hover {
     color: #fff;
 }
 
+.blog-post-sub-title a{
+    color:#fff;
+    
+}
+.blog-post-sub-title a:hover{
+    transition:0.5s;
+    color:#000acd;
+    text-decoration:none;
+}
+
 .img-container {
     float: left;
     width: 40%;
@@ -262,6 +278,7 @@ button.btn.btn-primary a:hover {
 .blog-post-article {
     float: right;
     width: 55%;
+    color:#000;
 }
 
 .blog-post-article p {
@@ -272,6 +289,9 @@ button.btn.btn-primary a:hover {
     padding-top: 20px;
     clear: both;
     text-align: center;
+}
+.footer-post{
+    text-align:right;
 }
 /* Side Blog Content */
 
@@ -372,6 +392,20 @@ button.btn.btn-primary a:hover {
 
 .post-article {
     margin-top: 3%;
+}
+
+/* Single page posts */
+.post-single{
+    float:left;
+    width:66%;
+    padding:2%;
+    margin-top:1%;
+    border:1px dashed #000acd;
+}
+.widget-single{
+    margin-top:10px;
+    float:right;
+    width:30%;
 }
 /* FOOTER*/
 

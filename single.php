@@ -10,7 +10,7 @@
             <div class="col-12 main-blog-content">
                 <?php if (have_posts()) : ?>
                     <?php while (have_posts()) : the_post(); ?>
-                        <article class="post">
+                        <article class="post-single">
                             <div class="blog-post-title-single-page">
                                 <h3>
                                     <a>
@@ -31,13 +31,30 @@
                             <?php endif; ?>
                             <div class="post-article">
                                 <?php the_content(); ?>
+                                <div class="footer-post">
+                                    Category:
+                                    <?php
+                                            $categories = get_the_category();
+                                            $separator = " , ";
+                                            $output  = '';
+                                            if ($categories) {
+                                                foreach ($categories as $category) {
+                                                    $output .= '<a href="' .
+                                                        get_category_link($category->term_id) . ' ">' . $category->cat_name . '</
+                                                a>' . $separator;
+                                                }
+                                            }
+                                            echo trim($output, $separator);
+                                            ?>
+                                </div>
                                 <br>
                             </div>
-
-
-
-
                         </article>
+                        <div class="widget-single">
+                            <?php include('widgets2.php'); ?>
+                        </div>
+                        <div class="clr">
+                        </div>
                     <?php endwhile; ?>
                 <?php else : ?>
                     <?php echo wpautop('Nu avem postari'); ?>
@@ -45,7 +62,7 @@
                 <?php endif; ?>
                 <br style="width:300px;">
                 <?php comments_template(); ?>
-                
+
             </div>
 
         </div>
