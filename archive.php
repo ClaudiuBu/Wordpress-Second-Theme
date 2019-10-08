@@ -29,22 +29,13 @@
         <div class="row">
             <!-- Left side -->
             <div class="col-8 main-blog-content">
-            
-            <?php if (have_posts()) : ?>
+
+                <?php if (have_posts()) : ?>
                     <?php while (have_posts()) : the_post(); ?>
-                        <div class="archive-post">
-                            <h4>
-                                <a href="<?php the_permalink(); ?>">
-                                    <?php the_title(); ?>
-                                </a>
-                            </h4>
-                            <p>Posted on : <?php the_time(' Y-m-d '); ?> at
-                                <?php the_time('H:i'); ?> </p>
-                            <hr>
-                        </div>
+                    <?php get_template_part('content', get_post_format()); ?>
                     <?php endwhile; ?>
-                <?php else :?>
-                    <?php echo wpautop("No search results were found"); ?>
+                <?php else : ?>
+                    <?php echo wpautop("No results were found"); ?>
                 <?php endif; ?>
             </div>
 

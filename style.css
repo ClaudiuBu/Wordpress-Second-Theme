@@ -290,7 +290,7 @@ article.post{
 .read-more-container {
     padding-top: 20px;
     clear: both;
-    text-align: center;
+    text-align: left;
 }
 .footer-post{
     text-align:right;
@@ -371,9 +371,9 @@ article.post{
 /* Single page */
 
 .blog-post-title-single-page {
-    margin-top: 3%;
+    margin-top: 1%;
     color: #007bff;
-    text-align: center;
+    text-align: left;
     
 }
 
@@ -402,12 +402,17 @@ article.post{
     width:66%;
     padding:2%;
     margin-top:1%;
-    border:1px dashed #000acd;
+    border:1px dotted #ccc;
 }
 .widget-single{
     margin-top:10px;
     float:right;
     width:30%;
+}
+/* Post formate page */
+/* Aside */
+.post-aside{
+    background-color: #cfdeee !important;
 }
 /* Archive search */
 .page-header{

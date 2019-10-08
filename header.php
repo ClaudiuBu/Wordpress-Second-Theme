@@ -57,11 +57,9 @@
                                         <i class="fas fa-search"></i>
                                     </button>
                                 </td>
+                                </form>
                             </tr>
                         </table>
-
-
-                        </form>
 
                     </div>
                 </div>
