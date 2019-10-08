@@ -407,6 +407,30 @@ article.post{
     float:right;
     width:30%;
 }
+/* Archive search */
+.page-header{
+    color:#000;
+    margin-top:20px;
+    font-size:1.5rem;
+}
+.archive-post{
+    background-color:rgb(255,253,253);
+    margin-top:10px;
+    padding:1% 2%;
+    border:1px solid  rgb(168, 162, 162);
+
+}
+.archive-post h4, .archive-post a:hover{
+    margin-bottom:0;
+    text-decoration:none;
+}
+.archive-post p{
+    margin-bottom:0;
+    color:#000;
+}
+.archive-post hr{
+    margin-top:0px;
+}
 /* FOOTER*/
 
 .footer-navbar {

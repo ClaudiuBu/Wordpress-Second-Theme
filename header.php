@@ -43,7 +43,7 @@
                     </div>
 
                     <div class="top-search col-1 ">
-                        <form method="get" action="<?php esc_url(home_url('/')); ?>">
+                        <form method="get" action="<?php echo home_url(); ?>">
                             <input type="text" name="s" class="shadow-lg" placeholder="Search..">
                         </form>
 
