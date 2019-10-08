@@ -43,8 +43,24 @@
                     </div>
 
                     <div class="top-search col-1 ">
-                        <form method="get" action="<?php echo home_url(); ?>">
-                            <input type="text" name="s" class="shadow-lg" placeholder="Search..">
+                        <table>
+                            <tr>
+                                <td>
+                                    <form method="get" action="<?php echo home_url(); ?>" style="display:inline-block;">
+                                        <div class="search-bar">
+                                            <input type="text" name="s" class="shadow-lg" placeholder="Search..">
+
+                                        </div>
+                                </td>
+                                <td style="padding-top:10px; border-radius:5px;">
+                                    <button type="submit" class="btn btn-primary" style="padding: .1rem .4rem;">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+
+
                         </form>
 
                     </div>
