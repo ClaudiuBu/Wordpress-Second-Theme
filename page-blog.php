@@ -7,7 +7,7 @@
 
         <div class="row">
             <!-- Left side -->
-            <div class="col-8 main-blog-content">
+            <div class="col-8">
                 <?php
                 $args = array(
                     'post_type' => 'post'

@@ -6,7 +6,7 @@ function adv_theme_support()
 
     add_theme_support('post-thumbnails');
 
-    //Add menus
+    //Add menus ///Add navigation menu back-edn
     register_nav_menus(array(
         'primary' => __('Primary Menu'),
         'footer' => __('Footer Menu')
@@ -20,9 +20,18 @@ function adv_theme_support()
 
 add_action('after_setup_theme', 'adv_theme_support');
 
-//Add navigation menu back-edn
 
 
+
+// get child from parent function NAV
+function get_top_parent(){
+    global $post;
+    if($post->post_parent){
+        $ancestors = get_post_ancestors($post ->ID);
+        return $ancestors[0];
+    }
+    return $post->ID;
+    }
 
 
 /**
@@ -53,11 +62,7 @@ function init_widgets($id)
         'before_title' => '<div class="widget-title"><h3>',
         'after_title' => '</h3></div>'
     ));
-}
-add_action('widgets_init', 'init_widgets');
 
-function init_widgets2($id)
-{
     register_sidebar(array(
         'name' => 'Sidebar Front Page',
         'id' => 'sidebar2',
@@ -66,9 +71,36 @@ function init_widgets2($id)
         'before_title' => '<div class="box-title"><h4>',
         'after_title' => '</h4></div>'
     ));
-}
 
-add_action('widgets_init', 'init_widgets2');
+    register_sidebar(array(
+        'name' => 'Box 1',
+        'id' => 'box-1',
+        'before_widget' => '<div class="widget_2">',
+        'after_widget' => '</div>',
+        'before_title' => '<div class="box-title"><h4>',
+        'after_title' => '</h4></div>'
+    ));
+    register_sidebar(array(
+        'name' => 'Box 2',
+        'id' => 'box-2',
+        'before_widget' => '<div class="widget_2">',
+        'after_widget' => '</div>',
+        'before_title' => '<div class="box-title"><h4>',
+        'after_title' => '</h4></div>'
+    ));
+
+    register_sidebar(array(
+        'name' => 'Front-Index-Page',
+        'id' => 'showcase',
+        'before_widget' => '<div class="">',
+        'after_widget' => '</div>',
+        'before_title' => '<div class=""><h4>',
+        'after_title' => '</h4></div>'
+    ));
+
+}
+add_action('widgets_init', 'init_widgets');
+
 
 function enqueue_my_custom_script()
 {
@@ -76,3 +108,10 @@ function enqueue_my_custom_script()
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_my_custom_script');
+
+function page_is_parent(){
+    global $post;
+
+    $pages = get_pages('child_of ='.$post->ID);
+    return count($pages);
+}
